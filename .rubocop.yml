@@ -1,0 +1,99 @@
+inherit_from: .rubocop_todo.yml
+
+require:
+  - rubocop-factory_bot
+  - rubocop-rails
+  - rubocop-rspec
+
+AllCops:
+  NewCops: enable
+  Exclude:
+    - db/schema.rb
+    - bin/**/*
+
+Rails/I18nLocaleTexts:
+  Enabled: false
+
+FactoryBot/ConsistentParenthesesStyle:
+  EnforcedStyle: omit_parentheses
+
+Layout/CommentIndentation:
+  Exclude:
+    - "config/environments/**/*"
+
+Layout/EmptyLineAfterGuardClause:
+  Enabled: false
+
+Layout/IndentationConsistency:
+  Exclude:
+    - "config/environments/**/*"
+
+Layout/SpaceInsideArrayLiteralBrackets:
+  Exclude:
+    - "config/environments/**/*"
+
+Metrics/BlockLength:
+  Exclude:
+    - "config/environments/**/*"
+    - "spec/**/*"
+
+Metrics/MethodLength:
+  Exclude:
+    - "db/migrate/*"
+
+Naming/BlockForwarding:
+  Enabled: false
+
+Rails/RequestReferer:
+  EnforcedStyle: referrer
+
+RSpec/ExampleLength:
+  Max: 10
+
+RSpec/HookArgument:
+  EnforcedStyle: each
+
+RSpec/ImplicitSubject:
+  Enabled: false
+
+RSpec/LetSetup:
+  Enabled: false
+
+RSpec/MultipleExpectations:
+  Exclude:
+    - "spec/features/**/*"
+
+RSpec/MultipleMemoizedHelpers:
+  Exclude:
+    - "spec/features/**/*"
+    - "spec/requests/**/*"
+
+RSpec/NamedSubject:
+  Enabled: false
+
+RSpec/NestedGroups:
+  Enabled: false
+
+Style/ArgumentsForwarding:
+  Enabled: false
+
+Style/DoubleNegation:
+  Enabled: false
+
+Style/EmptyCaseCondition:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Exclude:
+    - "app/views/**/*.json.jbuilder"
+    - "db/migrate/*"
+
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+  Exclude:
+    - "config/**/*"
+
+Bundler/OrderedGems:
+  Enabled: yes
+  Include:
+    - "**/Gemfile"
