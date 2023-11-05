@@ -1,7 +1,8 @@
 # frozen_string_literal: true
 
+# manages the static pages
 class HomeController < ApplicationController
   def index
-    @user = current_user.email
+    redirect_to dashboard_path if user_signed_in?
   end
 end
