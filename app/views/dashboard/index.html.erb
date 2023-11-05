@@ -1,1 +1,5 @@
-<h1>THIS IS THE DASHBOARD</h1>
+<h1 class="text-2xl font-semibold">Dashboard</h1>
+
+<div class="mt-10">
+  <%= button_to "Link your Pinterest", user_pinterest_omniauth_authorize_path, method: :post, class: 'rounded-full bg-white px-4 py-2.5 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50', data: {turbo: false} %>
+</div>

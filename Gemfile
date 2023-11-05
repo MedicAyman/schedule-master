@@ -48,3 +48,8 @@ group :test do
   gem "selenium-webdriver"
   gem "shoulda-matchers", "~> 5.0"
 end
+
+# TODO: MAKE YOUR OWN PINTEREST OAUTH STRATEGY
+
+gem "omniauth-pinterest", github: "deepdivr/omniauth-pinterest"
+gem "omniauth-rails_csrf_protection", "~> 0.1.2"
